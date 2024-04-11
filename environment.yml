@@ -1,0 +1,12 @@
+name: jobim2024
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+dependencies:
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - bioconda::cutadapt
+
