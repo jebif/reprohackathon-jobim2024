@@ -9,4 +9,4 @@ dependencies:
   - matplotlib
   - seaborn
   - bioconda::cutadapt
-
+  - bioconda::star
