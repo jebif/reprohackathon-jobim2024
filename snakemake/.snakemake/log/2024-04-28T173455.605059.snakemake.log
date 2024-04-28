@@ -1,6 +1,0 @@
-Building DAG of jobs...
-MissingInputException in rule align in file /home/sebastien/Bureau/reprohackathon-jobim2024/snakemake/Snakefile, line 27:
-Missing input files for rule align:
-    output: /home/sebastien/Bureau/toy_examples/alignments/SRR4238351.sam, /home/sebastien/Bureau/toy_examples/alignments/SRR4238355.sam, /home/sebastien/Bureau/toy_examples/alignments/SRR4238359.sam, /home/sebastien/Bureau/toy_examples/alignments/SRR4238379.sam
-    affected files:
-        /home/sebastien/Bureau/toy_examples/index/yeast

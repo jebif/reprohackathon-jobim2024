@@ -1,2 +1,3 @@
 data
 .nextflow.*
+.snakemake

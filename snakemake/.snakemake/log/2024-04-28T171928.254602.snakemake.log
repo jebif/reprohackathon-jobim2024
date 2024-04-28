@@ -1,3 +1,0 @@
-NameError in file /home/sebastien/Bureau/reprohackathon-jobim2024/snakemake/Snakefile, line 8:
-name 'sample' is not defined
-  File "/home/sebastien/Bureau/reprohackathon-jobim2024/snakemake/Snakefile", line 8, in <module>
