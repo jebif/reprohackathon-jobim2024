@@ -10,3 +10,4 @@ dependencies:
   - seaborn
   - bioconda::cutadapt
   - bioconda::star
+  - bioconda::bowtie2
