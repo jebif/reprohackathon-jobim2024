@@ -1,0 +1,3 @@
+WildcardError in file /home/sebastien/Bureau/reprohackathon-jobim2024/snakemake/Snakefile, line 9:
+No values given for wildcard 'BASE_DIR'.
+  File "/home/sebastien/Bureau/reprohackathon-jobim2024/snakemake/Snakefile", line 9, in <module>

@@ -1,0 +1,4 @@
+Building DAG of jobs...
+WildcardError in rule align in file /home/sebastien/Bureau/reprohackathon-jobim2024/snakemake/Snakefile, line 28:
+Wildcards in input files cannot be determined from output files:
+'sample'

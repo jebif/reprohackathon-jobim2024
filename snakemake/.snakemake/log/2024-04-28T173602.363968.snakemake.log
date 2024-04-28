@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+all          1
+index        1
+total        2
+
+Select jobs to execute...
+
+[Sun Apr 28 17:36:02 2024]
+rule index:
+    input: /home/sebastien/Bureau/toy_examples/genome/genome.fasta
+    output: /home/sebastien/Bureau/toy_examples/index/yeast.1.bt2
+    jobid: 1
+    reason: Missing output files: /home/sebastien/Bureau/toy_examples/index/yeast.1.bt2
+    threads: 8
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule index in file /home/sebastien/Bureau/reprohackathon-jobim2024/snakemake/Snakefile, line 14:
+Job 1  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/home/sebastien/Bureau/toy_examples/index/yeast.1.bt2
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-04-28T173602.363968.snakemake.log
