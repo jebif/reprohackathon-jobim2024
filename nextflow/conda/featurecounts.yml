@@ -1,7 +1,7 @@
-name: cutadapt
+name: featurecounts
 channels:
   - conda-forge
   - bioconda
   - defaults
 dependencies:
-  - cutadapt=4.7
+  - subread
