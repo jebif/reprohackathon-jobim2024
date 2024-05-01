@@ -1,0 +1,6 @@
+name: jobim2024
+channels:
+  - defaults
+  - bioconda
+dependencies:
+  - bowtie2
