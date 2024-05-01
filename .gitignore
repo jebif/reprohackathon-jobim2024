@@ -1,5 +1,13 @@
-data
 work
 .nextflow*
 .snakemake
 results
+hackathon2024/
+.nextflow*
+work/
+results/
+.DS_Store
+testing/
+testing*
+*.pyc
+
