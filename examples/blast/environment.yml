@@ -1,0 +1,7 @@
+name: diamond
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - diamond=2.1.8=h43eeafb_0
