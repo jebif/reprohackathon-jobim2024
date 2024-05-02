@@ -6,43 +6,40 @@ nextflow.enable.dsl=2
 
 params.fasta = "data/*.fasta"
 
-fasta_ch = Channel.fromPath(params.fasta)
-
 process DiamondDB {
     
     input:
         path fasta
     
     output:
-        path "reference" 
+        path "reference.dmnd" 
     
     script:
-    """
-    diamond makedb --in ${fasta} -d reference
-    """
+        """
+        diamond makedb --in ${fasta} -d reference
+        """
 }
 
 process DiamondBLASTp {
 
-    publishDir "$baseDir", mode: 'copy', pattern: 'diamond_alignment'
+    publishDir "$baseDir", mode: 'copy', pattern: 'matches.tsv'
     
     input:
         path fasta
         path reference
     
     output:
-        path "diamond_alignment"
+        path "matches.tsv"
     
     script:
-    """
-    diamond blastp -d ${reference} -q ${fasta} -o matches.tsv
-    """
+        """
+        diamond blastp -d ${reference} -q ${fasta} -o matches.tsv
+        """
 }
 
 workflow {
+    fasta_ch = Channel.fromPath(params.fasta)
 
-
-    // reads_ch.view()
     DiamondDB(fasta_ch)
 
     DiamondBLASTp(fasta_ch, DiamondDB.out)
