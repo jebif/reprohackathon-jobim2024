@@ -1,0 +1,6 @@
+name: samtool
+channels:
+  - bioconda
+  - defaults
+dependencies:
+  - samtools

@@ -1,0 +1,10 @@
+name: pipeline
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - subread
+  - qualimap
+  - samtools
+  - star
