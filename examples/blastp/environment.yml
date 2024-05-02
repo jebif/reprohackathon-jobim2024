@@ -1,4 +1,4 @@
-name: diamond
+name: jobim2024
 channels:
   - defaults
   - bioconda
