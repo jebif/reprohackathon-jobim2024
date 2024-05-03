@@ -4,8 +4,8 @@
 
 nextflow.enable.dsl=2
 
-params.genome = "../../data/test-datasets/reference/genome.fa"
-params.datapath = "../../data/test-datasets/testdata/*.fastq.gz"
+params.genome = "${projectDir}/workflow/data/test-datasets/reference/genome.fa"
+params.datapath = "${projectDir}/workflow/data/test-datasets/testdata/*.fastq.gz"
 params.index_prefix = "test"
 
 reads_ch = Channel.fromPath(params.datapath)
