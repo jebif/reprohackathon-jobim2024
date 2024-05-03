@@ -1,4 +1,4 @@
-name: jobim2024
+name: bowtie2
 channels:
   - defaults
   - bioconda
