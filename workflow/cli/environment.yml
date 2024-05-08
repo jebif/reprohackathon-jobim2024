@@ -1,0 +1,9 @@
+name: pipeline
+channels:
+  - defaults
+  - bioconda
+dependencies:
+  - subread
+  - qualimap
+  - samtools
+  - star

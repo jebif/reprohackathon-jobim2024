@@ -1,5 +1,10 @@
-data
 work
 .nextflow*
 .snakemake
 results
+hackathon2024/
+.DS_Store
+testing/
+testing*
+*.pyc
+

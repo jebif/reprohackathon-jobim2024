@@ -1,0 +1,6 @@
+name: star
+channels:
+  - defaults
+  - bioconda
+dependencies:
+  - star
