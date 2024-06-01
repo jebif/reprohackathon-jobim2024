@@ -7,18 +7,17 @@ configfile: "config.yaml"
 import os
 import glob
 
-reads = glob.glob(f"{config["reads"]}/*_*.fastq.gz")
+reads = glob.glob(f'{config["reads"]}/*_*.fastq.gz')
 sample_identifiers = [
     os.path.basename(read).replace(".fastq.gz", "").replace("_2", "").replace("_1", "") for read in reads
 ]
 sample_identifiers = list(set(sample_identifiers))
 
-print(sample_identifiers)
 
 rule all:
     input:
         expand(
-          "results/{sample}.Aligned.sortedByCoord.out.bam", sample=sample_identifiers
+          "results/{sample}_count.txt", sample=sample_identifiers
         )
 
 
@@ -41,6 +40,7 @@ rule star_index:
     params:
         genome_dir="tmp/genome_dir",
     threads: 2
+    conda: "../nextflow/conda/star.yml"
     shell:
         """
         STAR --runMode genomeGenerate \
@@ -72,6 +72,7 @@ rule star_align:
         replicateId="{sample}",
         prefix="results/{sample}."
     threads: 2
+    conda: "../nextflow/conda /star.yml"
     shell:
         """
         STAR --genomeDir "{params.genome_dir}" \
@@ -86,3 +87,45 @@ rule star_align:
             --outSAMattrRGline ID:{params.replicateId} LB:library PL:illumina PU:machine SM:GM12878 \
             --outFileNamePrefix "{params.prefix}"
         """
+
+rule index_bam:
+    input:
+        bam="tmp/{sample}.Aligned.sortedByCoord.out.bam",
+    output:
+        bam="tmp/{sample}.Aligned.sortedByCoord.out.bai",
+    conda: "../nextflow/conda/samtools.yml"
+    shell:
+        """
+        samtools index "{input.bam}" 
+        """
+
+# rule qualimap:
+#     input:
+#         bam="tmp/{sample}.Aligned.sortedByCoord.out.bam",
+#         gtf=config["genes"]
+#     output:
+#       ?
+#     params:
+#         replicateId="{sample}"
+#     shell:
+#         """
+#         qualimap rnaseq -bam "{input.bam}"" -gtf "{input.gtf}" -outdir "results/{params.replicateId}-qualimap-report" --java-mem-size=16G
+#         """
+        
+rule featurecounts:
+    input:
+        bam="tmp/{sample}.Aligned.sortedByCoord.out.bam",
+        gtf=config["genes"]
+    output:
+        counts="results/{sample}_count.txt"
+    conda: "../nextflow/conda/featurecounts.yml"
+    shell:
+        """
+        featureCounts -p -s 0 \
+              -t exon \
+              -g gene_id \
+              -a "{input.gtf}" \
+              -o "{output.counts}" \
+              "{input.bam}"
+        """
+    
