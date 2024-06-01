@@ -1,0 +1,41 @@
+"""
+Exercise, in Snakemake
+"""
+
+import os
+import glob
+
+input_fasta = glob.glob("data/*.fasta")
+
+
+rule all:
+    input:
+        [f"results/{os.path.basename(f).replace('.fasta', '.matches.tsv')}" for f in input_fasta]
+
+    
+rule diamond_blastp:
+    input:
+        db="tmp/{input}.dmnd",
+        query="data/{input}.fasta"
+    output:
+        matches="results/{input}.matches.tsv"
+    params:
+        db="tmp/{input}"
+    shell:
+        """
+        diamond blastp --db "{params.db}" --query "{input.query}" --out "{output.matches}"
+        """
+
+rule diamond_index:
+    input:
+        fasta='data/{input}.fasta',
+    output:
+        db='tmp/{input}.dmnd'
+    params:
+        db='tmp/{input}'
+    shell:
+        """
+        diamond makedb --in "{input.fasta}" -d "{params.db}"
+        """
+    
+
