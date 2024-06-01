@@ -1,0 +1,32 @@
+STAR version=2.7.11b
+STAR compilation time,server,dir=2024-03-19T08:38:59+0000 :/opt/conda/conda-bld/star_1710837244939/work/source
+##### Command Line:
+/home/sebastien/miniforge3/envs/reprohackathon/bin/STAR-avx2 --runMode genomeGenerate --genomeDir genome_dir --genomeFastaFiles /home/sebastien/Bureau/reprohackathon-jobim2024/workflow/cli/data/reference/genome.fa --runThreadN 8
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runMode                       genomeGenerate        ~RE-DEFINED
+genomeDir                     genome_dir     ~RE-DEFINED
+genomeFastaFiles              /home/sebastien/Bureau/reprohackathon-jobim2024/workflow/cli/data/reference/genome.fa        ~RE-DEFINED
+runThreadN                    8     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+runThreadN                        8
+genomeDir                         genome_dir
+genomeFastaFiles                  /home/sebastien/Bureau/reprohackathon-jobim2024/workflow/cli/data/reference/genome.fa   
+
+-------------------------------
+##### Final effective command line:
+/home/sebastien/miniforge3/envs/reprohackathon/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 8   --genomeDir genome_dir   --genomeFastaFiles /home/sebastien/Bureau/reprohackathon-jobim2024/workflow/cli/data/reference/genome.fa   
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory exists and will be overwritten: genome_dir/
+Jun 01 11:04:12 ... starting to generate Genome files
+
+EXITING because of INPUT ERROR: could not open genomeFastaFile: /home/sebastien/Bureau/reprohackathon-jobim2024/workflow/cli/data/reference/genome.fa
+
+Jun 01 11:04:12 ...... FATAL ERROR, exiting

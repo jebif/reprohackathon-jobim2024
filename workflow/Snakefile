@@ -1,0 +1,27 @@
+# Imports part
+import os
+import glob
+import pathlib
+
+# Set parameters
+GENOME = os.getcwd() + "/data/reference/genome.fa"
+READS = os.getcwd() + "/data/reads/"
+GTF = ""
+RESULTS = ""
+
+
+print(f"Current working directory: {os.getcwd()}")
+print(f"Genome: {GENOME}")
+print(f"Reads: {READS}")
+
+test = glob.glob(READS + "*.fastq")
+
+print(test)
+
+
+
+
+
+rule all: 
+    input:
+        expand("results/{sample}.bam", sample = [pathlib.Path(f).stem for f in test])
