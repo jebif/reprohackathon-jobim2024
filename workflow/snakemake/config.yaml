@@ -1,0 +1,3 @@
+genome: "../data/reference/genome.fa"
+genes: "../data/reference/genes.gtf"
+reads: "../data/reads"

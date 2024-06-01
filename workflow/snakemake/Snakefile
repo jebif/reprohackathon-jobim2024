@@ -1,0 +1,88 @@
+"""
+Run a RNA seq analysis workflow
+"""
+
+configfile: "config.yaml"
+
+import os
+import glob
+
+reads = glob.glob(f"{config["reads"]}/*_*.fastq.gz")
+sample_identifiers = [
+    os.path.basename(read).replace(".fastq.gz", "").replace("_2", "").replace("_1", "") for read in reads
+]
+sample_identifiers = list(set(sample_identifiers))
+
+print(sample_identifiers)
+
+rule all:
+    input:
+        expand(
+          "results/{sample}.Aligned.sortedByCoord.out.bam", sample=sample_identifiers
+        )
+
+
+rule star_index:
+    input:
+        genome=config["genome"]
+    output:
+        multiext(
+            "tmp/genome_dir/", 
+            "chrLength.txt", 
+            "chrName.txt", 
+            "chrNameLength.txt", 
+            "chrStart.txt", 
+            "Genome", 
+            "genomeParameters.txt", 
+            "Log.out", 
+            "SA", 
+            "SAindex"
+        )
+    params:
+        genome_dir="tmp/genome_dir",
+    threads: 2
+    shell:
+        """
+        STAR --runMode genomeGenerate \
+            --genomeDir "{params.genome_dir}" \
+            --genomeFastaFiles "{input.genome}" \
+            --runThreadN {threads}
+        """
+
+rule star_align:
+    input:
+        reads_1="../data/reads/{sample}_1.fastq.gz",
+        reads_2="../data/reads/{sample}_2.fastq.gz",
+        db=multiext(
+            "tmp/genome_dir/", 
+            "chrLength.txt", 
+            "chrName.txt", 
+            "chrNameLength.txt", 
+            "chrStart.txt", 
+            "Genome", 
+            "genomeParameters.txt", 
+            "Log.out", 
+            "SA", 
+            "SAindex"
+        )
+    output:
+        bam="results/{sample}.Aligned.sortedByCoord.out.bam",
+    params:
+        genome_dir="tmp/genome_dir",
+        replicateId="{sample}",
+        prefix="results/{sample}."
+    threads: 2
+    shell:
+        """
+        STAR --genomeDir "{params.genome_dir}" \
+            --readFilesIn "{input.reads_1}" "{input.reads_2}" \
+            --runThreadN "{threads}" \
+            --readFilesCommand zcat \
+            --outFilterType BySJout \
+            --alignSJoverhangMin 8 \
+            --alignSJDBoverhangMin 1 \
+            --outFilterMismatchNmax 999 \
+            --outSAMtype BAM SortedByCoordinate \
+            --outSAMattrRGline ID:{params.replicateId} LB:library PL:illumina PU:machine SM:GM12878 \
+            --outFileNamePrefix "{params.prefix}"
+        """
