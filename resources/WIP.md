@@ -1,6 +1,7 @@
 # WIP (06/02/2024)
 
 ## Ordre du jour 
+
 ### Nombre de participants à ce jour : 23 
 	- La plupart sont des ingénieurs de recherche, les autres sont des doctorants et des post-doc (Stats à faire pour l'AG de l'asso)
 	- Il faut faire un questionnaire pour demander :
@@ -21,7 +22,7 @@
 	- Tutoriel à faire par @samuelortion ?
 - [ ] Présentation et atelier Netflow --> @maxulysse
 	- Slides déjà prêtes ?
-- Pour aller plus loin
+- [ ]  Pour aller plus loin --> Qui ?
 	- Mentionner Docker et Singularity
 - [ ] Présentation du projet en autonomie --> @sebgra / julien ?
 	- Capture d'écran à mettre sur la diapo + ajouter le git clone 
