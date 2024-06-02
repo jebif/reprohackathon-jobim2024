@@ -20,7 +20,7 @@
 	- A faire
 - [ ] Atelier Snakemake --> @sebgra 
 	- Tutoriel à faire par @samuelortion ?
-- [ ] Présentation et atelier Netflow --> @maxulysse
+- [ ] Présentation et atelier Nexflow --> @maxulysse
 	- Slides déjà prêtes ?
 - [ ]  Pour aller plus loin --> Qui ?
 	- Mentionner Docker et Singularity
