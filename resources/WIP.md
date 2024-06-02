@@ -11,6 +11,9 @@
 	- Point 1) permettra de créer des groupes hétérogènes pour la partie projet en autonome.
 
 ### ETA Slides / Ateliers + Répartition des ateliers
+
+On ne reprend pas les diapo de Pasteur parce que trop "scolaire" pas assez didactique, les idées vectrices pour les concepts généraux sont tirés d'une ressource open-source sur la reproductibilité en recherche:  https://www.repro4everyone.org/
+
 - [ ] Intro générale (Reproductibilité des méthodes principes généraux) --> @ladyson1806
 - [x] Atelier Git (Tutoriel guidé) --> @ladyson1806
 	- Doit être  modifié pour être adapté au JEBIF@JOBIM, voir la review de doc par @jroussea + retrait des captures d'écran
