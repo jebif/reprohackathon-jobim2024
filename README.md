@@ -1,20 +1,16 @@
-# JeBiF @ JOBIM 2024 - reprohackathon
-
-<p align="center">
+# JeBiF@JOBIM 2024 - Toulouse
 
 Will you be able to reproduce the results of our _paper_ in less than a day in a reproducible way?
 
-</p>
-
 ---
 
-## Data sources
+## Présentation du repo
 
-
-
-## Analysis test
-
-
+- *data/* : contains the test data used for the hackathon
+- *exercises/* : contains the corrections to the Nextflow and Snakemake exercises
+- *program/* : JeBiFJOBIM 2024 program
+- *resources/* : contains course materials
+- *workflow/* : contains a sample workflow for the hackathon as well as the instructions
 
 ## References
 

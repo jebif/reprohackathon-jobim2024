@@ -1,0 +1,6 @@
+name: jobim2024
+channels:
+  - defaults
+  - bioconda
+dependencies:
+  - diamond=2.1.8=h43eeafb_0
