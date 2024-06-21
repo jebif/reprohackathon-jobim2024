@@ -1,6 +1,0 @@
-name: bowtie2
-channels:
-  - defaults
-  - bioconda
-dependencies:
-  - bowtie2

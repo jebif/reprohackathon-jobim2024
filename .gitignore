@@ -7,4 +7,12 @@ hackathon2024/
 testing/
 testing*
 *.pyc
-
+Aligned.sortedByCoord.out.bam
+workflow/cli/data
+workflow/cli/genome_dir
+Log.final.out
+Log.out
+Log.progress.out
+results
+SJ.out.tab
+_STARtmp
