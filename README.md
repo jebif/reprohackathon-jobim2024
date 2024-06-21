@@ -4,7 +4,7 @@ Will you be able to reproduce the results of our _paper_ in less than a day in a
 
 ---
 
-## Présentation du repo
+## Repositories presentation
 
 - *data/* : contains the test data used for the hackathon
 - *exercises/* : contains the corrections to the Nextflow and Snakemake exercises
