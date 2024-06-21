@@ -4,6 +4,7 @@ Conda is a package and environment for python. It has two main advantages over t
 - Built-in virtual environment creation 
 - Integration of non-python packages
 A virtual environment managed by conda can use packages from different languages, which is useful for data analysis pipelines that combine R and python scripts for example. It is possible to use conda for any language, which makes it an all-around great addition in the bioinformatician's toolbelt.
+
 ### Shortcomings
 
 Nothing is perfect, and conda is far from being an exception. For starters, any package installed in a conda environment but not by conda will not be considered as installed by the manager, which can impair the reproducibility of a project. For example, packages installed by pip or the R function `install.packages()` would not be exported by the command `conda env export` which is supposed to export all packages installed in the environment to ensure reproducibility of a code. Thus, inside a conda environment, you should never use anything else to install packages.

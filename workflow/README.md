@@ -1,6 +1,6 @@
 # Workflow manager
 
-Here are the instructions for the 2 exercises about workflow managers (Snakemake and Nextlfow).
+Instructions for the hackthon.
 
 ## Data
 
@@ -114,11 +114,7 @@ jebif2024/
 │
 ├── nextflow.config # Nextflow
 │
-├── config.yaml # Snakemake
-│
-├──  main.nf # Nextflow
-│
-└── Snakefile # Snakemake
+└── main.nf # Nextflow
 ```
 
 ## Help
