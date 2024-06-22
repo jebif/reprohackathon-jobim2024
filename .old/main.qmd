@@ -1,0 +1,11 @@
+---
+title: Untitled
+author:
+    # lastnames first letters make JEBIF and are plant genera
+    # see https://w.wiki/9ZKj for an helper SPARQL query in case of lack of inspiration...
+    - J. Jacaranda
+    - O. Espinosa
+    - B. Barnadesia
+    - I. Iris
+    - M. Fischerina
+---
