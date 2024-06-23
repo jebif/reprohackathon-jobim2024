@@ -1,8 +1,4 @@
-# Data.Trek 2020: Git Tutorial
-
-__Author: Savandara Besse__
-
-_____
+# JEBiF@JOBIM: Git Tutorial
 
 ## Installation
 Depending on your operating system, follow the instructions to install Git from this [web page](https://carpentries.github.io/workshop-template/#git).
@@ -69,16 +65,12 @@ Next, you would want to clone your repository on your computer. To do so, in you
 > - At this point, nothing should be in your empty repository. You will be creating and modifying files in your projects. An unique README.md file, which depicts the structure and the goal of your project, should at some point be created.
 > - The URL is on GitHub on the main page of your repository and can be obtained by clicking on the “Clone or Download" button.
 
-![](01_clone.png)
-
 
 ### 4. Add a new file into your repository and update your Git repo
 1.	Create a file in your local repository. In my example, it is the empty file "fake_file.txt".
 2.	Type `git add fake_file.txt` in your terminal or git bash. This will “warn” your git that you want to commit a change.
 3.	Type `git commit -m “New file”`. This will create a new commit with a short description. Try to be as explicit as you can!
 4.	Type `git push` to push your changes to your remote Git repository.
-
-![](02_add_commit_push.png)
 
 > __Tips__:
 > -	Always think of committing when you modify a file!  This would allow you to have an useful historic of your changes (_aka. versioning_).
@@ -90,8 +82,6 @@ Next, you would want to clone your repository on your computer. To do so, in you
 > -	 `git pull` will help you get the latest version of your remote Git repository from Github (not shown in my example).
 > - If there is something new in your Git repository (either because you added something through the web interface or because someone else changed something), the content of the remote repository will be downloaded into your local repository.
 > - If nothing has been changed, it will tell you that your repository is up to date.
-
-![](03_status.png)
 
 
 ### 5. Create and work in a branch
@@ -105,8 +95,6 @@ $ git checkout -b  Parallele_branch
 ```bash
 $ git checkout BRANCHNAME ## here master or Parallele_branch
 ```
-
-![](04_checkout.png)
 
 > __Tips__:
 > Have you seen the differences between my two branches?
@@ -122,30 +110,47 @@ $ git checkout master
 $ git merge Parallele_branch
 ```
 
-![](05_merge.png)
+___
 
+## Miscellaneous
 
-### 7. Miscellaneous
+### Discard your changes and go back to your older version
 
-##### a. Discard your changes and go back to your older version
 The easiest way to go back to an older version is the use this command line:
 
 ```bash
 $ git reset --hard 0ad5a7a6
 ```
-Doing so, you will return to a specific commit (here "0ad5a7a6"). This is particularly useful in the case something went wrong along the way and you want to recover your previous work. You can learn more about undoing things [here](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/undoing-things).
 
-##### b. Delete a branch
+By doing so, you will return to a specific commit (here "0ad5a7a6"). This is particularly useful in the case something went wrong along the way and you want to recover your previous work. You can learn more about undoing things [here](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/undoing-things).
+
+<br>
+
+### Delete a branch
+
 If you want to delete a branch from your local repository, you can use this command line:
 ```bash
 $ git checkout -d Parallele_branch
 ```
 > __Tips__:
->  /!\ Avoid deleting your master branch, tho.
+>  /!\ Avoid deleting your master branch ;)
 
+<br>
 
-### Acknowledgments
-Thanks to @FrancisBanville, @graciellehigino and
-@gabrieldansereau for their Git demonstration on Zoom and for their feedbacks on this summary tutorial. 😊
+### Help, I push a large file in my repo.
 
-You can view their tutorial on [Youtube](https://www.youtube.com/watch?v=VV1SPh6XK-0) and take a look at their [proposed workflow](https://github.com/Randonnees-Datatrek/data-trek-2020/blob/ef5b5e0f3a0d445be52ca6f305a837a6287d5671/roadmap-demo/script.md). 
+Don't be scared, it happened to me (all the time). Here is your life savior page: [About Large Files On Github](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
+
+<br>
+
+____
+
+### **Authorship & Acknowledgments**
+
+Initial content from [Data.Trek 2020](https://github.com/randonneesdatatrek/data-trek-2020/tree/master/Tutorials/Git_Tutorial)
+
+- Written and adapted by Savandara Besse (@ladyson1806) 
+- Reviewed for JEBif@JOBIM 2024 by Jérémy Rousseau (@jroussea) & Maxime Garcia (@maxulysse)
+
+>_Last modification: 06-23-2024_
+
