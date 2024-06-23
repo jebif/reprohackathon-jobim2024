@@ -110,29 +110,47 @@ $ git checkout master
 $ git merge Parallele_branch
 ```
 
+___
 
-### 7. Miscellaneous
+## Miscellaneous
 
-##### a. Discard your changes and go back to your older version
+### Discard your changes and go back to your older version
+
 The easiest way to go back to an older version is the use this command line:
 
 ```bash
 $ git reset --hard 0ad5a7a6
 ```
-Doing so, you will return to a specific commit (here "0ad5a7a6"). This is particularly useful in the case something went wrong along the way and you want to recover your previous work. You can learn more about undoing things [here](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/undoing-things).
 
-##### b. Delete a branch
+By doing so, you will return to a specific commit (here "0ad5a7a6"). This is particularly useful in the case something went wrong along the way and you want to recover your previous work. You can learn more about undoing things [here](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/undoing-things).
+
+<br>
+
+### Delete a branch
+
 If you want to delete a branch from your local repository, you can use this command line:
 ```bash
 $ git checkout -d Parallele_branch
 ```
 > __Tips__:
->  /!\ Avoid deleting your master branch, tho.
-
-
+>  /!\ Avoid deleting your master branch ;)
 
 <br>
 
-### Authorship & Acknowledgments
-- Initial content from [Data.Trek 2020](https://github.com/randonneesdatatrek/data-trek-2020/tree/master/Tutorials/Git_Tutorial), written by Savandara Besse and reviewed by the Data.Trek 2020 organizing committee
-- _Last modification: 06-22-2024_
+### Help, I push a large file in my repo.
+
+Don't be scared, it happened to me (all the time). Here is your life savior page: [About Large Files On Github](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
+
+<br>
+
+____
+
+### **Authorship & Acknowledgments**
+
+Initial content from [Data.Trek 2020](https://github.com/randonneesdatatrek/data-trek-2020/tree/master/Tutorials/Git_Tutorial)
+
+- Written and adapted by Savandara Besse (@ladyson1806) 
+- Reviewed for JEBif@JOBIM 2024 by Jérémy Rousseau (@jroussea) & Maxime Garcia (@maxulysse)
+
+>_Last modification: 06-23-2024_
+
