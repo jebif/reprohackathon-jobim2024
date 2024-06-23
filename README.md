@@ -6,10 +6,10 @@ Will you be able to reproduce the results of our _paper_ in less than a day in a
 
 ## Repositories presentation
 
-- *exercises/* : contains the corrections to the Nextflow and Snakemake exercises
-- *program/* : JeBiF@JOBIM 2024 program
-- *resources/* : contains the course materials
-- *workflow/* : contains a sample workflow for the hackathon as well as the instructions
+- `./exercises/` : contains the corrections to the Nextflow and Snakemake exercises
+- `./program/` : JeBiF@JOBIM 2024 program
+- `./resources/` : contains the course materials
+- `./workflow/` : contains a sample workflow for the hackathon as well as the instructions
 
 ## References
 
