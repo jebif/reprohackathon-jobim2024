@@ -5,7 +5,7 @@ Depending on your operating system, follow the instructions to install Git from 
 
 ______
 
-## Main steps to get started with Git
+## **Main steps to get started with Git**
 
 ### 1. Create a GitHub account
 Sign up on [GitHub](https://github.com/).
@@ -112,7 +112,7 @@ $ git merge Parallele_branch
 
 ___
 
-## Miscellaneous
+## **Miscellaneous**
 
 ### Discard your changes and go back to your older version
 
