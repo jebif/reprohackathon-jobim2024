@@ -21,3 +21,5 @@ __Will you be able to reproduce the results of our _paper_ in less than a day in
 > The five pillars of computational reproducibility: bioinformatics and beyond.
 > _Briefings in bioinformatics_ (2023), doi: [10.1093/bib/bbad375](https://doi.org/10.1093/bib/bbad375)
 
+## Online resources
+> [Repro4Everyone](https://www.repro4everyone.org/): Community-led reproducibility workshops.
