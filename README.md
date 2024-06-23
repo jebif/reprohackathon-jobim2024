@@ -6,7 +6,6 @@ Will you be able to reproduce the results of our _paper_ in less than a day in a
 
 ## Repositories presentation
 
-- *data/* : contains the test data used for the hackathon
 - *exercises/* : contains the corrections to the Nextflow and Snakemake exercises
 - *program/* : JeBiFJOBIM 2024 program
 - *resources/* : contains course materials
