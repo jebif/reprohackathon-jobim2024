@@ -159,8 +159,6 @@ ___
 
 ### **Authorship & Acknowledgments**
 
-Initial content from [Data.Trek 2020](https://github.com/randonneesdatatrek/data-trek-2020/tree/master/Tutorials/Git_Tutorial)
-
 - Written by XXXX (?)
 
 - Reviewed for JEBif@JOBIM 2024 by Savandara Besse (@ladyson1806) 
