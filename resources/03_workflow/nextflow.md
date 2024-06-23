@@ -20,7 +20,7 @@ _______
 
 > Installation steps are available on this [page](https://www.nextflow.io/docs/latest/install.html).
 
-1. Install java
+### 1. Install java
 
 ```bash
 # Install SDKMAN:
@@ -33,7 +33,7 @@ sdk install java 17.0.10-tem
 java -version
 ```
 
-2. Install Nextflow
+### 2. Install Nextflow
 
 ```bash
 # Install Nextflow:
@@ -85,8 +85,6 @@ ___
 <br>
 
 ### **Authorship & Acknowledgments**
-
-Initial content from [Data.Trek 2020](https://github.com/randonneesdatatrek/data-trek-2020/tree/master/Tutorials/Git_Tutorial)
 
 - Written by XXXX (?)
 
