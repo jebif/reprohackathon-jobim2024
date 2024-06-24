@@ -159,10 +159,8 @@ ___
 
 ### **Authorship & Acknowledgments**
 
-- Written by XXXX (?)
+- Written by Benjamin Loire (@Rumengol)
 
 - Reviewed for JEBif@JOBIM 2024 by Savandara Besse (@ladyson1806) 
 
 >_Last modification: 06-23-2024_
-
-
