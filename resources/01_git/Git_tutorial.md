@@ -21,7 +21,7 @@ In your terminal / git bash:
 1. Set a Git username:
 
 ```bash
-$ git config --global user.name "Datatrek Team"
+git config --global user.name "Datatrek Team"
 ```
 2. Confirm that you have set your username correctly:
 
@@ -36,13 +36,13 @@ In your terminal / git bash:
 1. Set an email address in Git. You can use your GitHub-provided no-reply email address or any email address.
 
 ```bash
-$ git config --global user.email "email@example.com"
+git config --global user.email "email@example.com"
 ```
 
 2. Confirm that you have set your email address correctly in Git:
 
 ```bash
-$ git config --global user.email
+git config --global user.email
 > email@example.com
 ```
 
@@ -88,12 +88,12 @@ Next, you would want to clone your repository on your computer. To do so, in you
 Creating a branch is useful when you want to make some tests without modifying the content of your master branch (_aka. the main one_). Also, if you are working in a group, make sure to work on your own branch to not overwrite the code of your teammates! In this example, I will create a branch called "Parallele_branch" and will add a new file in this branch.
 1. You can directly create a branch and move to it by writing:
 ```bash
-$ git checkout -b  Parallele_branch
+git checkout -b  Parallele_branch
 ```
 2. To switch between your different branches, you can simply write:
 
 ```bash
-$ git checkout BRANCHNAME ## here master or Parallele_branch
+git checkout BRANCHNAME ## here master or Parallele_branch
 ```
 
 > __Tips__:
@@ -103,11 +103,11 @@ $ git checkout BRANCHNAME ## here master or Parallele_branch
 If you need the file that you added in your second branch in the final version of your code, you need to merge your branch to the master branch.
 1. First, you need to come back to the master branch with this command line:
 ```bash
-$ git checkout master
+git checkout master
 ```
 2. You can then merge your branch to the master branch with this command line:
 ```bash
-$ git merge Parallele_branch
+git merge Parallele_branch
 ```
 
 ___
@@ -119,7 +119,7 @@ ___
 The easiest way to go back to an older version is the use this command line:
 
 ```bash
-$ git reset --hard 0ad5a7a6
+git reset --hard 0ad5a7a6
 ```
 
 By doing so, you will return to a specific commit (here "0ad5a7a6"). This is particularly useful in the case something went wrong along the way and you want to recover your previous work. You can learn more about undoing things [here](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/undoing-things).
@@ -130,7 +130,7 @@ By doing so, you will return to a specific commit (here "0ad5a7a6"). This is par
 
 If you want to delete a branch from your local repository, you can use this command line:
 ```bash
-$ git checkout -d Parallele_branch
+git checkout -d Parallele_branch
 ```
 > __Tips__:
 >  /!\ Avoid deleting your master branch ;)
