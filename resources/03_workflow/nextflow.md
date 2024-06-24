@@ -1,14 +1,26 @@
-## Nextflow overview
+# JEBiF@JOBIM: Git Tutorial
+## **Nextflow overview**
 
-Nextflow is a workflow system for creating scalable, portable, and reproducible workflows. It is based on the dataflow programming model, which greatly simplifies the writing of parallel and distributed pipelines, allowing you to focus on the flow of data and computation. Nextflow can deploy workflows on a variety of execution platforms, including your local machine, HPC schedulers, AWS Batch, Azure Batch, Google Cloud Batch, and Kubernetes. Additionally, it supports many ways to manage your software dependencies, including Conda, Spack, Docker, Podman, Singularity, and more.
+Nextflow is a workflow system for creating scalable, portable, and reproducible workflows. 
 
-For more information, please consult the [documentation](https://www.nextflow.io/docs/latest/index.html).
+It is based on the dataflow programming model, which greatly simplifies the writing of parallel and distributed pipelines, allowing you to focus on the flow of data and computation. 
 
-## Installation
+Nextflow can deploy workflows on a variety of execution platforms, including your local machine, HPC schedulers, AWS Batch, Azure Batch, Google Cloud Batch, and Kubernetes. 
 
-Installation steps are available on this [page](https://www.nextflow.io/docs/latest/install.html).
+Additionally, it supports many ways to manage your software dependencies, including Conda, Spack, Docker, Podman, Singularity, and more.
 
-- Install java
+> For more information, please consult the [documentation](https://www.nextflow.io/docs/latest/index.html).
+
+
+<br> 
+
+_______ 
+
+## **Installation**
+
+> Installation steps are available on this [page](https://www.nextflow.io/docs/latest/install.html).
+
+### 1. Install java
 
 ```bash
 # Install SDKMAN:
@@ -21,7 +33,7 @@ sdk install java 17.0.10-tem
 java -version
 ```
 
-- Install Nextflow
+### 2. Install Nextflow
 
 ```bash
 # Install Nextflow:
@@ -37,7 +49,11 @@ sudo mv nextflow /usr/local/bin
 nextflow info
 ```
 
-## Exercise
+<br>
+
+___ 
+
+## **Exercise**
 
 You are now going to develop two workflows. You'll need to use conda to run the tools (If you wish, you can also use Docker).
 
@@ -63,4 +79,17 @@ Data :
 
 Tool :
 - [Diamond](https://bowtie-bio.sourceforge.net/bowtie2/index.shtml) 2.1.8
+
+___
+
+<br>
+
+### **Authorship & Acknowledgments**
+
+- Written by XXXX (?)
+
+- Reviewed for JEBif@JOBIM 2024 by Savandara Besse (@ladyson1806) 
+
+>_Last modification: 06-24-2024_
+
 
