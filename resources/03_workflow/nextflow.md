@@ -86,10 +86,8 @@ ___
 
 ### **Authorship & Acknowledgments**
 
-- Written by XXXX (?)
+- Written by Jérémy Rousseau (jrousseau)
 
 - Reviewed for JEBif@JOBIM 2024 by Savandara Besse (@ladyson1806) 
 
 >_Last modification: 06-24-2024_
-
-
